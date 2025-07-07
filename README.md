@@ -9,5 +9,8 @@ kubectl apply -f mysql-pvc.yaml
 kubectl apply -f mysql-deployment.yaml
 kubectl apply -f flask-deployment.yaml
 
-Then visit:
-http://<minikube-ip>:30008
+✅ Step 3: Build and Push Flask Image
+docker build -t your_dockerhub/flask-mysql-demo:latest .
+docker push your_dockerhub/flask-mysql-demo:latest
+
+
